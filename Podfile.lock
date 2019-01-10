@@ -1,0 +1,16 @@
+PODS:
+  - MessengerKit (1.0.0)
+
+DEPENDENCIES:
+  - MessengerKit (from `../`)
+
+EXTERNAL SOURCES:
+  MessengerKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MessengerKit: c74c9a93a7c4bf8835ae3542194cd80b08f70b8a
+
+PODFILE CHECKSUM: 9afb280b15e22ff0c4558bc0541eb3d3d886b24a
+
+COCOAPODS: 1.5.3

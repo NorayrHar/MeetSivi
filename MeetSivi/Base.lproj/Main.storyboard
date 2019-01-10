@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3UV-SE-t2c" kind="relationship" relationship="viewControllers" id="VY8-TR-RKc"/>
+                        <segue destination="wox-wI-C1R" kind="relationship" relationship="viewControllers" id="QxC-HI-FUo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="GMg-87-qYc">
+            <objects>
+                <navigationController id="3UV-SE-t2c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" id="O31-Qm-FgM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1eu-Ki-Hl9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kna-1c-awS" kind="relationship" relationship="rootViewController" id="4D1-YD-Otg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsV-F6-GKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="-358"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="uba-Lw-hZv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9C-LX-wkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Chat" id="kna-1c-awS" customClass="ChatViewController" customModule="MeetSivi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="496-j1-BCe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nDj-rU-ubW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9T7-AP-i2z"/>
+                    <navigationItem key="navigationItem" id="hV0-sA-hqV"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1646" y="-358"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="MAM-j9-JDZ">
+            <objects>
+                <viewController title="Notifications" id="lvt-1o-e7A" customClass="NotificationsViewController" customModule="MeetSivi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lgf-z7-aw6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FbC-n6-dYB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="7Mb-EY-Hwe"/>
+                    <navigationItem key="navigationItem" id="pAp-cd-CwB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xat-iG-phJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="381"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="0Tq-VJ-12Z">
+            <objects>
+                <navigationController id="wox-wI-C1R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" id="WPy-Db-KEt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EiY-SU-b2r">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lvt-1o-e7A" kind="relationship" relationship="rootViewController" id="nBa-bs-w9o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fp-xh-pVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="381"/>
+        </scene>
+    </scenes>
+</document>

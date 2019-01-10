@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6920AC7621E7AE4B00C8CBC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6920AC7521E7AE4B00C8CBC5 /* AppDelegate.swift */; };
+		6920AC7D21E7AE4B00C8CBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6920AC7B21E7AE4B00C8CBC5 /* Main.storyboard */; };
+		6920AC7F21E7AE4C00C8CBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6920AC7E21E7AE4C00C8CBC5 /* Assets.xcassets */; };
+		6920AC8221E7AE4C00C8CBC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6920AC8021E7AE4C00C8CBC5 /* LaunchScreen.storyboard */; };
+		6920AC8D21E7AE4C00C8CBC5 /* MeetSiviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6920AC8C21E7AE4C00C8CBC5 /* MeetSiviTests.swift */; };
+		6920AC9821E7AE4C00C8CBC5 /* MeetSiviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6920AC9721E7AE4C00C8CBC5 /* MeetSiviUITests.swift */; };
+		6920ACA621E7AEA300C8CBC5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6920ACA521E7AEA300C8CBC5 /* ChatViewController.swift */; };
+		6920ACA821E7AEC200C8CBC5 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6920ACA721E7AEC200C8CBC5 /* NotificationsViewController.swift */; };
+		E8347044584498186406C97B /* Pods_MeetSivi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF205E3AFA944356D82ADA9 /* Pods_MeetSivi.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6920AC8921E7AE4C00C8CBC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6920AC6A21E7AE4A00C8CBC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6920AC7121E7AE4A00C8CBC5;
+			remoteInfo = MeetSivi;
+		};
+		6920AC9421E7AE4C00C8CBC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6920AC6A21E7AE4A00C8CBC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6920AC7121E7AE4A00C8CBC5;
+			remoteInfo = MeetSivi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2AD1A100E504471F32289BCD /* Pods-MeetSivi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetSivi.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetSivi/Pods-MeetSivi.release.xcconfig"; sourceTree = "<group>"; };
+		6920AC7221E7AE4B00C8CBC5 /* MeetSivi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetSivi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6920AC7521E7AE4B00C8CBC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6920AC7C21E7AE4B00C8CBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6920AC7E21E7AE4C00C8CBC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6920AC8121E7AE4C00C8CBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6920AC8321E7AE4C00C8CBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6920AC8821E7AE4C00C8CBC5 /* MeetSiviTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetSiviTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6920AC8C21E7AE4C00C8CBC5 /* MeetSiviTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSiviTests.swift; sourceTree = "<group>"; };
+		6920AC8E21E7AE4C00C8CBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6920AC9321E7AE4C00C8CBC5 /* MeetSiviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetSiviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6920AC9721E7AE4C00C8CBC5 /* MeetSiviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSiviUITests.swift; sourceTree = "<group>"; };
+		6920AC9921E7AE4C00C8CBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6920ACA521E7AEA300C8CBC5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		6920ACA721E7AEC200C8CBC5 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		BDF205E3AFA944356D82ADA9 /* Pods_MeetSivi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetSivi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E196A1AA35B8D59F57B045B4 /* Pods-MeetSivi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetSivi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetSivi/Pods-MeetSivi.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6920AC6F21E7AE4A00C8CBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8347044584498186406C97B /* Pods_MeetSivi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6920AC8521E7AE4C00C8CBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6920AC9021E7AE4C00C8CBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0401D9CB002D766BB50328F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDF205E3AFA944356D82ADA9 /* Pods_MeetSivi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6920AC6921E7AE4A00C8CBC5 = {
+			isa = PBXGroup;
+			children = (
+				6920AC7421E7AE4B00C8CBC5 /* MeetSivi */,
+				6920AC8B21E7AE4C00C8CBC5 /* MeetSiviTests */,
+				6920AC9621E7AE4C00C8CBC5 /* MeetSiviUITests */,
+				6920AC7321E7AE4B00C8CBC5 /* Products */,
+				FC7CFAFF15EEA3F9B2B5FA0F /* Pods */,
+				0401D9CB002D766BB50328F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6920AC7321E7AE4B00C8CBC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6920AC7221E7AE4B00C8CBC5 /* MeetSivi.app */,
+				6920AC8821E7AE4C00C8CBC5 /* MeetSiviTests.xctest */,
+				6920AC9321E7AE4C00C8CBC5 /* MeetSiviUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6920AC7421E7AE4B00C8CBC5 /* MeetSivi */ = {
+			isa = PBXGroup;
+			children = (
+				6920AC7521E7AE4B00C8CBC5 /* AppDelegate.swift */,
+				6920ACA521E7AEA300C8CBC5 /* ChatViewController.swift */,
+				6920ACA721E7AEC200C8CBC5 /* NotificationsViewController.swift */,
+				6920AC7B21E7AE4B00C8CBC5 /* Main.storyboard */,
+				6920AC7E21E7AE4C00C8CBC5 /* Assets.xcassets */,
+				6920AC8021E7AE4C00C8CBC5 /* LaunchScreen.storyboard */,
+				6920AC8321E7AE4C00C8CBC5 /* Info.plist */,
+			);
+			path = MeetSivi;
+			sourceTree = "<group>";
+		};
+		6920AC8B21E7AE4C00C8CBC5 /* MeetSiviTests */ = {
+			isa = PBXGroup;
+			children = (
+				6920AC8C21E7AE4C00C8CBC5 /* MeetSiviTests.swift */,
+				6920AC8E21E7AE4C00C8CBC5 /* Info.plist */,
+			);
+			path = MeetSiviTests;
+			sourceTree = "<group>";
+		};
+		6920AC9621E7AE4C00C8CBC5 /* MeetSiviUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6920AC9721E7AE4C00C8CBC5 /* MeetSiviUITests.swift */,
+				6920AC9921E7AE4C00C8CBC5 /* Info.plist */,
+			);
+			path = MeetSiviUITests;
+			sourceTree = "<group>";
+		};
+		FC7CFAFF15EEA3F9B2B5FA0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E196A1AA35B8D59F57B045B4 /* Pods-MeetSivi.debug.xcconfig */,
+				2AD1A100E504471F32289BCD /* Pods-MeetSivi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6920AC7121E7AE4A00C8CBC5 /* MeetSivi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6920AC9C21E7AE4C00C8CBC5 /* Build configuration list for PBXNativeTarget "MeetSivi" */;
+			buildPhases = (
+				13F9D3AE5CA2AEA0016FAF85 /* [CP] Check Pods Manifest.lock */,
+				6920AC6E21E7AE4A00C8CBC5 /* Sources */,
+				6920AC6F21E7AE4A00C8CBC5 /* Frameworks */,
+				6920AC7021E7AE4A00C8CBC5 /* Resources */,
+				5FCAC7F2216F2D9DAE236724 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetSivi;
+			productName = MeetSivi;
+			productReference = 6920AC7221E7AE4B00C8CBC5 /* MeetSivi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6920AC8721E7AE4C00C8CBC5 /* MeetSiviTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6920AC9F21E7AE4C00C8CBC5 /* Build configuration list for PBXNativeTarget "MeetSiviTests" */;
+			buildPhases = (
+				6920AC8421E7AE4C00C8CBC5 /* Sources */,
+				6920AC8521E7AE4C00C8CBC5 /* Frameworks */,
+				6920AC8621E7AE4C00C8CBC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6920AC8A21E7AE4C00C8CBC5 /* PBXTargetDependency */,
+			);
+			name = MeetSiviTests;
+			productName = MeetSiviTests;
+			productReference = 6920AC8821E7AE4C00C8CBC5 /* MeetSiviTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6920AC9221E7AE4C00C8CBC5 /* MeetSiviUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6920ACA221E7AE4C00C8CBC5 /* Build configuration list for PBXNativeTarget "MeetSiviUITests" */;
+			buildPhases = (
+				6920AC8F21E7AE4C00C8CBC5 /* Sources */,
+				6920AC9021E7AE4C00C8CBC5 /* Frameworks */,
+				6920AC9121E7AE4C00C8CBC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6920AC9521E7AE4C00C8CBC5 /* PBXTargetDependency */,
+			);
+			name = MeetSiviUITests;
+			productName = MeetSiviUITests;
+			productReference = 6920AC9321E7AE4C00C8CBC5 /* MeetSiviUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6920AC6A21E7AE4A00C8CBC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Norayr Harutyunyan";
+				TargetAttributes = {
+					6920AC7121E7AE4A00C8CBC5 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					6920AC8721E7AE4C00C8CBC5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6920AC7121E7AE4A00C8CBC5;
+					};
+					6920AC9221E7AE4C00C8CBC5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6920AC7121E7AE4A00C8CBC5;
+					};
+				};
+			};
+			buildConfigurationList = 6920AC6D21E7AE4A00C8CBC5 /* Build configuration list for PBXProject "MeetSivi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6920AC6921E7AE4A00C8CBC5;
+			productRefGroup = 6920AC7321E7AE4B00C8CBC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6920AC7121E7AE4A00C8CBC5 /* MeetSivi */,
+				6920AC8721E7AE4C00C8CBC5 /* MeetSiviTests */,
+				6920AC9221E7AE4C00C8CBC5 /* MeetSiviUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6920AC7021E7AE4A00C8CBC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6920AC8221E7AE4C00C8CBC5 /* LaunchScreen.storyboard in Resources */,
+				6920AC7F21E7AE4C00C8CBC5 /* Assets.xcassets in Resources */,
+				6920AC7D21E7AE4B00C8CBC5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6920AC8621E7AE4C00C8CBC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6920AC9121E7AE4C00C8CBC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13F9D3AE5CA2AEA0016FAF85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeetSivi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FCAC7F2216F2D9DAE236724 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeetSivi/Pods-MeetSivi-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MessengerKit/MessengerKit.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MessengerKit.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetSivi/Pods-MeetSivi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6920AC6E21E7AE4A00C8CBC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6920ACA821E7AEC200C8CBC5 /* NotificationsViewController.swift in Sources */,
+				6920AC7621E7AE4B00C8CBC5 /* AppDelegate.swift in Sources */,
+				6920ACA621E7AEA300C8CBC5 /* ChatViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6920AC8421E7AE4C00C8CBC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6920AC8D21E7AE4C00C8CBC5 /* MeetSiviTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6920AC8F21E7AE4C00C8CBC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6920AC9821E7AE4C00C8CBC5 /* MeetSiviUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6920AC8A21E7AE4C00C8CBC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6920AC7121E7AE4A00C8CBC5 /* MeetSivi */;
+			targetProxy = 6920AC8921E7AE4C00C8CBC5 /* PBXContainerItemProxy */;
+		};
+		6920AC9521E7AE4C00C8CBC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6920AC7121E7AE4A00C8CBC5 /* MeetSivi */;
+			targetProxy = 6920AC9421E7AE4C00C8CBC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6920AC7B21E7AE4B00C8CBC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6920AC7C21E7AE4B00C8CBC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6920AC8021E7AE4C00C8CBC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6920AC8121E7AE4C00C8CBC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6920AC9A21E7AE4C00C8CBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6920AC9B21E7AE4C00C8CBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6920AC9D21E7AE4C00C8CBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E196A1AA35B8D59F57B045B4 /* Pods-MeetSivi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetSivi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.MeetSivi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6920AC9E21E7AE4C00C8CBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AD1A100E504471F32289BCD /* Pods-MeetSivi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetSivi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.MeetSivi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6920ACA021E7AE4C00C8CBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetSiviTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.MeetSiviTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetSivi.app/MeetSivi";
+			};
+			name = Debug;
+		};
+		6920ACA121E7AE4C00C8CBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetSiviTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.MeetSiviTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetSivi.app/MeetSivi";
+			};
+			name = Release;
+		};
+		6920ACA321E7AE4C00C8CBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetSiviUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.MeetSiviUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeetSivi;
+			};
+			name = Debug;
+		};
+		6920ACA421E7AE4C00C8CBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetSiviUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.MeetSiviUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeetSivi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6920AC6D21E7AE4A00C8CBC5 /* Build configuration list for PBXProject "MeetSivi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6920AC9A21E7AE4C00C8CBC5 /* Debug */,
+				6920AC9B21E7AE4C00C8CBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6920AC9C21E7AE4C00C8CBC5 /* Build configuration list for PBXNativeTarget "MeetSivi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6920AC9D21E7AE4C00C8CBC5 /* Debug */,
+				6920AC9E21E7AE4C00C8CBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6920AC9F21E7AE4C00C8CBC5 /* Build configuration list for PBXNativeTarget "MeetSiviTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6920ACA021E7AE4C00C8CBC5 /* Debug */,
+				6920ACA121E7AE4C00C8CBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6920ACA221E7AE4C00C8CBC5 /* Build configuration list for PBXNativeTarget "MeetSiviUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6920ACA321E7AE4C00C8CBC5 /* Debug */,
+				6920ACA421E7AE4C00C8CBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6920AC6A21E7AE4A00C8CBC5 /* Project object */;
+}
