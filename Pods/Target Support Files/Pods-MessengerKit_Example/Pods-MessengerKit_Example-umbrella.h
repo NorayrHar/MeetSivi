@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double MessengerKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char MessengerKitVersionString[];
+FOUNDATION_EXPORT double Pods_MessengerKit_ExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MessengerKit_ExampleVersionString[];
 

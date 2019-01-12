@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MeetSivi.xcodeproj">
+      location = "group:/Users/norayrharutyunyan/Downloads/MessengerKit-master/Example/MeetSivi.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

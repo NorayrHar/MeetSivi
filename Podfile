@@ -1,5 +1,5 @@
 use_frameworks!
 
-target 'MeetSivi' do
-    pod 'MessengerKit', :path => '../'
+target 'MessengerKit_Example' do
+  pod 'MessengerKit', :path => '../'
 end
