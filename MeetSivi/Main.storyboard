@@ -87,11 +87,11 @@
             </objects>
             <point key="canvasLocation" x="-2073" y="-660"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Nhh-r8-h95">
             <objects>
                 <navigationController id="py2-06-PBL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wOr-4p-wGx"/>
+                    <tabBarItem key="tabBarItem" title="" image="chat" id="wOr-4p-wGx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CeA-Jb-WcX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -136,7 +136,7 @@
         <scene sceneID="WgO-rA-1Um">
             <objects>
                 <navigationController title="Notifications" id="wgu-rt-LJM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notifications" id="A7y-hZ-XGf"/>
+                    <tabBarItem key="tabBarItem" title="" image="notification" id="A7y-hZ-XGf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0VQ-Z1-5wg">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -150,4 +150,8 @@
             <point key="canvasLocation" x="-1140" y="-388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat" width="11" height="11"/>
+        <image name="notification" width="375" height="375"/>
+    </resources>
 </document>

@@ -57,11 +57,16 @@ class ChatViewController: MSGMessengerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Chat"
+
+        self.navigationItem.title = "Chat"
         
         dataSource = self
         delegate = self
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "language"),
+                                                            style: .done,
+                                                            target: self,
+                                                            action: #selector(menuButtonTapped(sender:)))
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -126,6 +131,26 @@ class ChatViewController: MSGMessengerViewController {
             }
         })
         
+    }
+
+    @objc func menuButtonTapped(sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Languages", message: "Please Select an language", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "English", style: .default , handler:{ (UIAlertAction)in
+            print("English")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Finnish", style: .default , handler:{ (UIAlertAction)in
+            print("Finnish")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:{ (UIAlertAction)in
+            print("User click Dismiss button")
+        }))
+        
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
     }
 
 }
