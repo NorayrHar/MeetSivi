@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChatViewController: MSGMessengerViewController {
 
-    let steve = User(displayName: "Steve", avatar: nil, avatarUrl: nil, isSender: true)
+    let you = User(displayName: "You", avatar: nil, avatarUrl: nil, isSender: true)
     
-    let tim = User(displayName: "Tim", avatar: nil, avatarUrl: nil, isSender: false)
+    let server = User(displayName: "Server", avatar: nil, avatarUrl: nil, isSender: false)
     
-    var id = 100
+    var initialID = 0
+    var id:Int {
+        self.initialID  = self.initialID + 1
+        return self.initialID
+    }
+    
+    var userId:Int?
+    var waitingForAnswer = false
+    
+    var command:String?
+    
+//    var messages:String?
     
     override var style: MSGMessengerStyle {
         var style = MessengerKit.Styles.iMessage
-        style.headerHeight = 0
+        style.headerHeight = 10
+        style.footerHeight = 10
 //        style.inputPlaceholder = "Message"
 //        style.alwaysDisplayTails = true
 //        style.outgoingBubbleColor = .magenta
@@ -32,27 +45,27 @@ class ChatViewController: MSGMessengerViewController {
     
     
     lazy var messages: [[MSGMessage]] = {
-        return [
-            [
-                MSGMessage(id: 1, body: .emoji("🐙💦🔫"), user: tim, sentAt: Date()),
-            ],
-            [
-                MSGMessage(id: 2, body: .text("Yeah sure, gimme 5"), user: steve, sentAt: Date()),
-                MSGMessage(id: 3, body: .text("Okay ready when you are"), user: steve, sentAt: Date())
-            ],
-            [
-                MSGMessage(id: 4, body: .text("Awesome 😁"), user: tim, sentAt: Date()),
-            ],
-            [
-                MSGMessage(id: 5, body: .text("Ugh, gotta sit through these two…"), user: steve, sentAt: Date()),
-            ],
-            [
-                MSGMessage(id: 6, body: .text("Every. Single. Time."), user: tim, sentAt: Date()),
-            ],
-            [
-                MSGMessage(id: 7, body: .emoji("🙄😭"), user: steve, sentAt: Date())
-            ]
-        ]
+        return []
+//            [
+//                MSGMessage(id: 1, body: .emoji("🐙💦🔫"), user: tim, sentAt: Date()),
+//            ],
+//            [
+//                MSGMessage(id: 2, body: .text("Yeah sure, gimme 5"), user: steve, sentAt: Date()),
+//                MSGMessage(id: 3, body: .text("Okay ready when you are"), user: steve, sentAt: Date())
+//            ],
+//            [
+//                MSGMessage(id: 4, body: .text("Awesome 😁"), user: tim, sentAt: Date()),
+//            ],
+//            [
+//                MSGMessage(id: 5, body: .text("Ugh, gotta sit through these two…"), user: steve, sentAt: Date()),
+//            ],
+//            [
+//                MSGMessage(id: 6, body: .text("Every. Single. Time."), user: tim, sentAt: Date()),
+//            ],
+//            [
+//                MSGMessage(id: 7, body: .emoji("🙄😭"), user: steve, sentAt: Date())
+//            ]
+//        ]
     }()
     
     override func viewDidLoad() {
@@ -67,6 +80,62 @@ class ChatViewController: MSGMessengerViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(menuButtonTapped(sender:)))
+
+        NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) { (notification) in
+//            self.messages.append([MSGMessage(id: 8, body: .text("All right."), user: self.server, sentAt: Date())])
+//
+//            var sectionIndex = self.messages.count - 1
+//            self.collectionView.insertSections([sectionIndex])
+//
+//            self.messages.append([MSGMessage(id: 9, body: .text("Not now."), user: self.server, sentAt: Date())])
+//            sectionIndex = self.messages.count - 1
+//            self.collectionView.insertSections([sectionIndex])
+        }
+        
+//        self.messages.append([MSGMessage(id: self.id, body: .text("....."), user: self.tim, sentAt: Date())])
+//        
+//        let sectionIndex = self.messages.count - 1
+//        self.collectionView.insertSections([sectionIndex])
+
+        Alamofire.request(Urls.addUser(),
+                          method: .post,
+                          parameters: ["command":"ADD_USER"],
+                          encoding: JSONEncoding.default,
+                          headers: nil).responseJSON { response in
+
+//                            self.removeLastMessage()
+
+                            switch response.result {
+                            case .success:
+                                print(response)
+                                
+                                if let responseData = response.result.value as? NSDictionary {
+                                    print(responseData)
+                                    
+                                    guard let command_ = responseData["command"] as? String,
+                                        let userId_ = responseData["userId"] as? Int,
+                                        let messages_ = responseData["messages"] as? Array<String> else {
+                                            return
+                                    }
+                                    
+                                    if let messageText = messages_.first {
+                                        self.command = command_
+                                        self.waitingForAnswer = true
+                                        self.userId = userId_
+                                        
+                                        self.messages.append([MSGMessage(id: self.id, body: .text(messageText), user: self.server, sentAt: Date())])
+                                        
+                                        let sectionIndex = self.messages.count - 1
+                                        self.collectionView.insertSections([sectionIndex])
+                                    }
+                                }
+
+                                break
+                            case .failure(let error):
+                                
+                                print(error)
+                            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,12 +145,67 @@ class ChatViewController: MSGMessengerViewController {
     }
     
     override func inputViewPrimaryActionTriggered(inputView: MSGInputView) {
-        id += 1
-        
         let body: MSGMessageBody = (inputView.message.containsOnlyEmoji && inputView.message.count < 5) ? .emoji(inputView.message) : .text(inputView.message)
         
-        let message = MSGMessage(id: id, body: body, user: steve, sentAt: Date())
+        let message = MSGMessage(id: self.id, body: body, user: you, sentAt: Date())
         insert(message)
+        collectionView.scrollToBottom(animated: false)
+
+        if self.waitingForAnswer, let command = self.command, let userId = self.userId {
+            self.messages.append([MSGMessage(id: self.id, body: .text("....."), user: self.server, sentAt: Date())])
+            
+            let sectionIndex = self.messages.count - 1
+            self.collectionView.insertSections([sectionIndex])
+            collectionView.scrollToBottom(animated: false)
+
+            Alamofire.request(Urls.addUser(),
+                              method: .post,
+                              parameters: ["command":command, "value":inputView.message],
+                              encoding: JSONEncoding.default,
+                              headers: ["userId" : "\(userId)"]).responseJSON { response in
+                                
+                                self.removeLastMessage()
+                                self.collectionView.scrollToBottom(animated: false)
+
+                                switch response.result {
+                                case .success:
+                                    print(response)
+                                    
+                                    if let responseData = response.result.value as? NSDictionary {
+                                        print(responseData)
+                                        
+                                        guard let command_ = responseData["command"] as? String,
+                                            let messagesList = responseData["messages"] as? Array<String> else {
+                                                return
+                                        }
+                                        
+                                        self.command = command_
+                                        
+                                        if self.command != "INVALID_COMMAND" && self.command != "DONE" {
+                                            self.waitingForAnswer = true
+                                        } else {
+                                            self.waitingForAnswer = false
+                                        }
+                                        
+                                        for message in messagesList {
+                                            self.messages.append([MSGMessage(id: self.id, body: .text(message), user: self.server, sentAt: Date())])
+                                            
+                                            let sectionIndex = self.messages.count - 1
+                                            self.collectionView.insertSections([sectionIndex])
+                                        }
+                                    }
+                                    
+                                    break
+                                case .failure(let error):
+                                    self.messages.append([MSGMessage(id: self.id, body: .text("Wrong answer"), user: self.server, sentAt: Date())])
+                                    
+                                    let sectionIndex = self.messages.count - 1
+                                    self.collectionView.insertSections([sectionIndex])
+
+                                    print(error)
+                                }
+            }
+        }
     }
     
     override func insert(_ message: MSGMessage) {
@@ -133,6 +257,12 @@ class ChatViewController: MSGMessengerViewController {
         
     }
 
+    func removeLastMessage() {
+        let sectionIndex = self.messages.count - 1
+        self.messages.removeLast()
+        self.collectionView.deleteSections(IndexSet(arrayLiteral: self.messages.count))
+    }
+    
     @objc func menuButtonTapped(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Languages", message: "Please Select an language", preferredStyle: .actionSheet)
         
@@ -178,7 +308,8 @@ extension ChatViewController: MSGDataSource {
     }
     
     func footerTitle(for section: Int) -> String? {
-        return "Just now"
+//        return "Just now"
+        return ""
     }
     
     func headerTitle(for section: Int) -> String? {
@@ -201,6 +332,14 @@ extension ChatViewController: MSGDelegate {
     
     func tapReceived(for message: MSGMessage) {
         print("Tapped: ", message)
+        
+//        let sectionIndex = self.messages.count - 1
+//        let itemIndex = self.messages[sectionIndex].count - 1
+//
+//        self.messages[self.messages.count - 1].removeLast()
+//        self.messages[self.messages.count - 1].removeLast()
+//
+//        self.collectionView.deleteItems(at: [IndexPath(item: itemIndex - 1, section: sectionIndex), IndexPath(item: itemIndex, section: sectionIndex)])
     }
     
     func longPressReceieved(for message: MSGMessage) {

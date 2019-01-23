@@ -111,19 +111,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ics-N2-aXr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUb-nh-UwX">
-                                <rect key="frame" x="133" y="323.5" width="109" height="20"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="PUb-nh-UwX" firstAttribute="centerX" secondItem="Ics-N2-aXr" secondAttribute="centerX" id="DHM-mY-ZZI"/>
-                            <constraint firstItem="PUb-nh-UwX" firstAttribute="centerY" secondItem="Ics-N2-aXr" secondAttribute="centerY" id="orT-mO-Abi"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bad-ED-Fym"/>
                     </view>
                     <navigationItem key="navigationItem" id="RNj-dD-eWL"/>
@@ -152,6 +140,6 @@
     </scenes>
     <resources>
         <image name="chat" width="11" height="11"/>
-        <image name="notification" width="375" height="375"/>
+        <image name="notification" width="11" height="11"/>
     </resources>
 </document>
